@@ -16,7 +16,7 @@
 
 - 把ZZSkin文件夹托入工程
 - 在要使用的文件中 `#import "ZZSkinManager.h"`
-- 添加代码形始：  
+- 添加代码形如：  
 
 ```
 self.label.zz_skinConfig(^(UILabel *label) {
