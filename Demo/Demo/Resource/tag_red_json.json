@@ -1,0 +1,22 @@
+{
+    "UIColor": {
+        "ident1": "#FF0000",
+        "ident2": "#FFFFCC"
+    },
+    "UIImage": {
+        "ident1": "image_1.jpg",
+        "ident2": "image_5.jpg",
+        "ident3": "支付宝_red.png",
+        "ident4": "京东_red.png",
+        "ident5": "qq_red.png",
+        "ident6": "支付宝_normal",
+        "ident7": "京东_normal",
+        "ident8": "qq_normal",
+        "ident9": "image_2.jpg"
+    },
+    "NSString": {
+        "ident1": "红色文本",
+        "ident2": "中国红",
+        "ident3": "RED"
+    }
+}
