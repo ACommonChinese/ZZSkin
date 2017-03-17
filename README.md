@@ -1,23 +1,18 @@
 # ZZSkin
-为了确保，再一次确认测试
-Developer分支测试：使用git checkout -b然后merge，然后...
-Developer分支测试2：使用git checkout -t origin/Developer命令
-Developer分支
-
 主题更换
 
-####需求：####
-项目中需要做到主题更换，比如黑夜/白天切换
+####需求：
+####项目中需要做到主题更换，比如黑夜/白天切换
 
-####效果图：####
+####效果图
 ![](./images/2.png)![](./images/3.png)
 
-####思路：####
+####思路
 以前也写过一个iOS主题更换的小库[ZZTheme](https://github.com/ACommonChinese/ZZTheme)，但API有些多，现在这个思路API相对简单许多，思路如下：  
 
 ![](./images/1.png)
 
-####使用方法：####
+####使用方法
 
 - 把ZZSkin文件夹托入工程
 - 在要使用的文件中 `#import "ZZSkinManager.h"`
