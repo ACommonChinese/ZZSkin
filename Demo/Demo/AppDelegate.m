@@ -33,9 +33,10 @@
     [[ZZSkinManager sharedManager] addSkin:@"RED" jsonData:[NSData dataWithContentsOfFile:[[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"tag_red_json.json"]]];
     [[ZZSkinManager sharedManager] addSkin:@"GREEN" jsonData:[NSData dataWithContentsOfFile:[[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"tag_green_json.json"]]];
     [[ZZSkinManager sharedManager] addSkin:@"BLUE" jsonData:[NSData dataWithContentsOfFile:[[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"tag_blue_json.json"]]];
-    
+    NSLog(@"----- %@ --------", [[ZZSkinManager sharedManager] jsonInfo]);
     // 指明默认主题
     [[ZZSkinManager sharedManager] defaultSkin:@"BLUE"];
+    NSLog(@"===== %@ ========", [[ZZSkinManager sharedManager] jsonInfo]);
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

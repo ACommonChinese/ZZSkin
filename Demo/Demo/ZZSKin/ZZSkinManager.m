@@ -39,19 +39,16 @@
 }
 
 - (void)setCurrentTag:(NSString *)currentTag {
-    _currentTag = [currentTag copy];
-    if ([self.allTag containsObject:currentTag] == NO) {
-        [self.allTag addObject:currentTag];
+    if ([_currentTag isEqualToString:currentTag]) {
+        return;
     }
+    _currentTag = [currentTag copy];
     [[NSUserDefaults standardUserDefaults] setObject:currentTag forKey:ZZSkinCurrentTag];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
 - (void)defaultSkin:(NSString *)skinTag {
-    _currentTag = [[NSUserDefaults standardUserDefaults] objectForKey:ZZSkinCurrentTag];
-    if (_currentTag.length <= 0) {
-        self.currentTag = skinTag;
-    }
+    self.currentTag = skinTag;
 }
 
 - (void)startSkin:(NSString *)skinTag {
@@ -62,7 +59,10 @@
 }
 
 - (void)addSkin:(NSString *)skinTag jsonData:(NSData *)jsonData {
-    if (skinTag == nil || jsonData == nil || [self.allTag containsObject:skinTag]) return;
+    if (skinTag == nil || jsonData == nil) return;
+    if (self.allTag && [self.allTag containsObject:skinTag]) {
+        return;
+    }
     NSError *jsonError = nil;
     NSDictionary *skinDict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&jsonError];
     NSAssert(!jsonError, @"添加的主题json配置数据解析错误 - 错误描述");
@@ -82,12 +82,16 @@
 
 + (UIImage *)imageWithIdentifier:(NSString *)identifier {
     if ([[ZZSkinManager sharedManager] currentTag] == nil) return nil;
+    NSLog(@"???????????? %@", [[ZZSkinManager sharedManager] currentTag]);
     NSDictionary *info = [[[ZZSkinManager sharedManager] jsonInfo] objectForKey:[[ZZSkinManager sharedManager] currentTag]];
     NSString *str = [info[@"UIImage"] objectForKey:identifier];
+    NSLog(@"<<<<< %@ >>>>>>", info);
+    NSLog(@"%@ ------------ %@", identifier, str);
     NSAssert(str.length > 0, @"JSON: Get Image fail");
     
     UIImage *image = [UIImage imageNamed:str];
     if (image == nil) {
+        
         image = [UIImage imageWithContentsOfFile:str];
         // ... From documents of your custom path....
     }
