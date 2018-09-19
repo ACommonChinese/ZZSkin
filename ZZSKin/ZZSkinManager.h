@@ -2,8 +2,8 @@
 //  ZZSkinManager.h
 //  Demo
 //
-//  Created by 刘威振 on 8/29/16.
-//  Copyright © 2016 刘威振. All rights reserved.
+//  Created by liuxing8807@126.com on 8/29/16.
+//  Copyright © 2016 liuweizhen. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -12,10 +12,19 @@
 
 @interface ZZSkinManager : NSObject
 
-@property (nonatomic, copy) NSString *currentTag;
+
+/**         / tag_1
+ * jsonInfo - tag_2
+ *          \ tag_3
+ *          \ ...
+ */
 @property (nonatomic) NSMutableDictionary *jsonInfo;
 
+@property (nonatomic, copy, readonly) NSString *currentTag;
+
 + (instancetype)sharedManager;
+
+- (void)defaultSkin:(NSString *)skinTag;
 - (void)startSkin:(NSString *)skinTag;
 - (void)addSkin:(NSString *)skinTag jsonData:(NSData *)jsonData;
 

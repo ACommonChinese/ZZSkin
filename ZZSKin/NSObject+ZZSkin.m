@@ -2,8 +2,8 @@
 //  NSObject+ZZSkin.m
 //  Demo
 //
-//  Created by 刘威振 on 8/29/16.
-//  Copyright © 2016 刘威振. All rights reserved.
+//  Created by liuxing8807@126.com on 8/29/16.
+//  Copyright © 2016 liuweizhen. All rights reserved.
 //
 
 #import "NSObject+ZZSkin.h"
@@ -31,7 +31,7 @@
 - (ZZSkin *)zz_skin {
     ZZSkin *skin = objc_getAssociatedObject(self, _cmd);
     if (!skin) {
-        NSAssert(![self isKindOfClass:[ZZSkin class]], @"Class error: ZZTheme");
+        NSAssert(![self isKindOfClass:[ZZSkin class]], @"Class error: ZZSkin");
         skin         = [[ZZSkin alloc] init];
         self.zz_skin = skin;
         skin.master  = self;
@@ -45,11 +45,13 @@
 }
 
 #pragma mark - zz_skinConfig
+
+// 这样一个Block: 返回值是NSObject*， 参数是个block
 - (block_skin_t)zz_skinConfig {
     block_skin_t skinConfig = objc_getAssociatedObject(self, _cmd);
     if (skinConfig == nil) {
         __weak typeof(self) weakSelf = self;
-        skinConfig =  ^(block_id_t aBlockConfig) {
+        skinConfig = ^NSObject *(block_id_t aBlockConfig) {
             NSString *currentTag = [[ZZSkinManager sharedManager] currentTag];
             if (currentTag) {
                 if (aBlockConfig) {

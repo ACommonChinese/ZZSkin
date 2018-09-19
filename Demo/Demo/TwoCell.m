@@ -2,8 +2,8 @@
 //  TwoCell.m
 //  Demo
 //
-//  Created by 刘威振 on 9/2/16.
-//  Copyright © 2016 刘威振. All rights reserved.
+//  Created by liuxing8807@126.com on 9/2/16.
+//  Copyright © 2016 liuweizhen. All rights reserved.
 //
 
 #import "TwoCell.h"

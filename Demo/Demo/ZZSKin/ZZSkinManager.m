@@ -2,8 +2,8 @@
 //  ZZSkinManager.m
 //  Demo
 //
-//  Created by 刘威振 on 8/29/16.
-//  Copyright © 2016 刘威振. All rights reserved.
+//  Created by liuxing8807@126.com on 8/29/16.
+//  Copyright © 2016 liuweizhen. All rights reserved.
 //
 
 #import "ZZSkinManager.h"
@@ -62,7 +62,7 @@
 }
 
 - (void)addSkin:(NSString *)skinTag jsonData:(NSData *)jsonData {
-    if (skinTag == nil || jsonData == nil) return;
+    if (skinTag == nil || jsonData == nil || [self.allTag containsObject:skinTag]) return;
     NSError *jsonError = nil;
     NSDictionary *skinDict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&jsonError];
     NSAssert(!jsonError, @"添加的主题json配置数据解析错误 - 错误描述");

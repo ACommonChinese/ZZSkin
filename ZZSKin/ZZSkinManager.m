@@ -2,8 +2,8 @@
 //  ZZSkinManager.m
 //  Demo
 //
-//  Created by 刘威振 on 8/29/16.
-//  Copyright © 2016 刘威振. All rights reserved.
+//  Created by liuxing8807@126.com on 8/29/16.
+//  Copyright © 2016 liuweizhen. All rights reserved.
 //
 
 #import "ZZSkinManager.h"
@@ -12,6 +12,7 @@
 
 @interface ZZSkinManager()
 
+@property (nonatomic, copy) NSString *currentTag;
 @property (nonatomic) NSMutableSet *allTag;
 @end
 
@@ -31,18 +32,25 @@
     if (self = [super init]) {
         NSString *skin = [[NSUserDefaults standardUserDefaults] objectForKey:ZZSkinCurrentTag];
         if (skin) {
-            self.currentSkin = skin;
+            self.currentTag = skin;
         }
     }
     return self;
 }
 
-- (void)setCurrentSkin:(NSString *)currentTag {
+- (void)setCurrentTag:(NSString *)currentTag {
     _currentTag = [currentTag copy];
     if ([self.allTag containsObject:currentTag] == NO) {
         [self.allTag addObject:currentTag];
-        [[NSUserDefaults standardUserDefaults] setObject:currentTag forKey:ZZSkinCurrentTag];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    [[NSUserDefaults standardUserDefaults] setObject:currentTag forKey:ZZSkinCurrentTag];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+- (void)defaultSkin:(NSString *)skinTag {
+    _currentTag = [[NSUserDefaults standardUserDefaults] objectForKey:ZZSkinCurrentTag];
+    if (_currentTag.length <= 0) {
+        self.currentTag = skinTag;
     }
 }
 
@@ -54,7 +62,7 @@
 }
 
 - (void)addSkin:(NSString *)skinTag jsonData:(NSData *)jsonData {
-    if (skinTag == nil || jsonData == nil) return;
+    if (skinTag == nil || jsonData == nil || [self.allTag containsObject:skinTag]) return;
     NSError *jsonError = nil;
     NSDictionary *skinDict = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&jsonError];
     NSAssert(!jsonError, @"添加的主题json配置数据解析错误 - 错误描述");
@@ -78,7 +86,13 @@
     NSString *str = [info[@"UIImage"] objectForKey:identifier];
     NSAssert(str.length > 0, @"JSON: Get Image fail");
     
-    return [UIImage imageNamed:str];
+    UIImage *image = [UIImage imageNamed:str];
+    if (image == nil) {
+        image = [UIImage imageWithContentsOfFile:str];
+        // ... From documents of your custom path....
+    }
+    
+    return image;
 }
 
 + (NSString *)stringWithIdentifier:(NSString *)identifier {

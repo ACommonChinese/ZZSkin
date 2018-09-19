@@ -2,15 +2,14 @@
 //  UIColor+NSString.m
 //  Demo
 //
-//  Created by 刘威振 on 8/29/16.
-//  Copyright © 2016 刘威振. All rights reserved.
+//  Created by liuxing8807@126.com on 8/29/16.
+//  Copyright © 2016 liuweizhen. All rights reserved.
 //
 
 #import "UIColor+SkinString.h"
 #import "ZZSkinManager.h"
 
 @implementation UIColor (SkinString)
-
 
 + (instancetype)colorWithString:(NSString *)colorStr {
     NSString *colorString = [[colorStr stringByReplacingOccurrencesOfString:@"#" withString: @""] uppercaseString];

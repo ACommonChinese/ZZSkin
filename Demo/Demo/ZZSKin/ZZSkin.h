@@ -2,8 +2,8 @@
 //  ZZSkin.h
 //  Demo
 //
-//  Created by 刘威振 on 8/29/16.
-//  Copyright © 2016 刘威振. All rights reserved.
+//  Created by liuxing8807@126.com on 8/29/16.
+//  Copyright © 2016 liuweizhen. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -14,7 +14,7 @@
 @property (nonatomic, weak) id master;
 
 - (void)addSkinConfig:(block_id_t)skinConfig;
-- (void)change;
 
+- (void)change;
 
 @end
