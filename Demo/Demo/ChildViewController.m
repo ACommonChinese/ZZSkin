@@ -46,15 +46,15 @@
 }
 
 - (IBAction)redButtonClick:(id)sender {
-    [[ZZSkinManager sharedManager] startSkin:@"RED"];
+    [[ZZSkinManager sharedManager] startSkin:ZZSkinTypeRed];
 }
 
 - (IBAction)greenButtonClick:(id)sender {
-    [[ZZSkinManager sharedManager] startSkin:@"GREEN"];
+    [[ZZSkinManager sharedManager] startSkin:ZZSkinTypeGreen];
 }
 
 - (IBAction)blueButtonClick:(id)sender {
-    [[ZZSkinManager sharedManager] startSkin:@"BLUE"];
+    [[ZZSkinManager sharedManager] startSkin:ZZSkinTypeBlue];
 }
 
 @end

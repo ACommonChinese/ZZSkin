@@ -10,11 +10,12 @@
 
 typedef void (^block_id_t)(id item);
 
-// 返回值是NSObject *，参数是一个block
 typedef NSObject * (^block_skin_t)(block_id_t blockConfig);
 
 @interface NSObject (ZZSkin)
 
 @property (nonatomic, copy, readonly) block_skin_t zz_skinConfig;
+
+- (void)zz_refresh;
 
 @end

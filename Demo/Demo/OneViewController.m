@@ -17,20 +17,23 @@
 @property (weak, nonatomic) IBOutlet UIButton *blueButton;
 
 @property (weak, nonatomic) IBOutlet UILabel *label;
+
+@property (nonatomic, assign) CGFloat fontSize;
+
 @end
 
 @implementation OneViewController
 
 - (IBAction)redButtonClick:(id)sender {
-    [[ZZSkinManager sharedManager] startSkin:@"RED"];
+    [[ZZSkinManager sharedManager] startSkin:ZZSkinTypeRed];
 }
 
 - (IBAction)greenButtonClick:(id)sender {
-    [[ZZSkinManager sharedManager] startSkin:@"GREEN"];
+    [[ZZSkinManager sharedManager] startSkin:ZZSkinTypeGreen];
 }
 
 - (IBAction)blueButtonClick:(id)sender {
-    [[ZZSkinManager sharedManager] startSkin:@"BLUE"];
+    [[ZZSkinManager sharedManager] startSkin:ZZSkinTypeBlue];
 }
 
 - (void)viewDidLoad {
@@ -56,11 +59,22 @@
     self.greenButton.zz_skinConfig(config);
     self.blueButton.zz_skinConfig(config);
     
+    self.fontSize = 50.0;
+    
     self.label.zz_skinConfig(^(UILabel *label) {
         label.textColor = [ZZSkinManager colorWithIdentifier:@"ident1"];
     }).zz_skinConfig(^(UILabel *label) {
         label.text = [ZZSkinManager stringWithIdentifier:@"ident1"];
+        
+        label.font = [UIFont systemFontOfSize:self.fontSize];
     });
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [super touchesBegan:touches withEvent:event];
+    self.fontSize = self.fontSize == 32.0 ? 50.0 : 32.0;
+    
+    [self.label zz_refresh];
 }
 
 @end

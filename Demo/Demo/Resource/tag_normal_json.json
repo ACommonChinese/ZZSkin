@@ -1,7 +1,7 @@
 {
     "UIColor": {
-        "ident1": "#0000FF",
-        "ident2": "#33FFFF"
+        "ident1": "#000000",
+        "ident2": "#000000"
     },
     "UIImage": {
         "ident1": "image_5.jpg",
@@ -15,8 +15,9 @@
         "ident9": "image_5.jpg"
     },
     "NSString": {
-        "ident1": "蓝色文本",
-        "ident2": "蓝色诚恳",
-        "ident3": "BLUE"
+        "ident1": "普通文本",
+        "ident2": "普通普通",
+        "ident3": "Common"
     }
 }
+

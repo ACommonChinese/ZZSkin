@@ -30,7 +30,6 @@
     item.title = @"Alipay";
     item.image = [[UIImage imageNamed:@"支付宝_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
 
-    // NSDictionary *titleInfo = @{NSForegroundColorAttributeName : [ZZSkinManager colorWithIdentifier:@"ident1"]};
     item.zz_skinConfig(^(UITabBarItem *item) {
         item.selectedImage = [[ZZSkinManager imageWithIdentifier:@"ident3"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         [item setTitleTextAttributes:@{NSForegroundColorAttributeName : [ZZSkinManager colorWithIdentifier:@"ident1"]} forState:UIControlStateSelected];

@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA133148215282F900FECAF7 /* tag_normal_json.json in Resources */ = {isa = PBXBuildFile; fileRef = DA133147215282F900FECAF7 /* tag_normal_json.json */; };
 		DA3983F71D7404E8009FB804 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3983F61D7404E8009FB804 /* main.m */; };
 		DA3983FA1D7404E8009FB804 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3983F91D7404E8009FB804 /* AppDelegate.m */; };
 		DA3983FC1D7404E8009FB804 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA3983FB1D7404E8009FB804 /* Assets.xcassets */; };
 		DA3983FF1D7404E8009FB804 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3983FD1D7404E8009FB804 /* LaunchScreen.storyboard */; };
-		DA39840F1D740543009FB804 /* ZZSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = DA39840E1D740543009FB804 /* ZZSkin.m */; };
 		DA3984121D740551009FB804 /* NSObject+ZZSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3984111D740551009FB804 /* NSObject+ZZSkin.m */; };
 		DA3984161D740D95009FB804 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3984141D740D95009FB804 /* OneViewController.m */; };
 		DA3984171D740D95009FB804 /* OneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA3984151D740D95009FB804 /* OneViewController.xib */; };
@@ -38,9 +38,7 @@
 		DA3984491D7428A1009FB804 /* 支付宝_green@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA3984381D7428A1009FB804 /* 支付宝_green@2x.png */; };
 		DA39844A1D7428A1009FB804 /* 支付宝_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA3984391D7428A1009FB804 /* 支付宝_normal@2x.png */; };
 		DA39844B1D7428A1009FB804 /* 支付宝_red@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DA39843A1D7428A1009FB804 /* 支付宝_red@2x.png */; };
-		DA39844E1D7428E6009FB804 /* UIColor+SkinString.m in Sources */ = {isa = PBXBuildFile; fileRef = DA39844D1D7428E6009FB804 /* UIColor+SkinString.m */; };
 		DA3984571D742E10009FB804 /* ZZSkinManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3984561D742E10009FB804 /* ZZSkinManager.m */; };
-		DA39845A1D7430C2009FB804 /* ZZSkinExtern.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3984591D7430C2009FB804 /* ZZSkinExtern.m */; };
 		DA39845E1D792C5C009FB804 /* TwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA39845C1D792C5C009FB804 /* TwoCell.m */; };
 		DA39845F1D792C5C009FB804 /* TwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA39845D1D792C5C009FB804 /* TwoCell.xib */; };
 		DA3984661D792C87009FB804 /* ChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3984641D792C87009FB804 /* ChildViewController.m */; };
@@ -48,6 +46,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA133147215282F900FECAF7 /* tag_normal_json.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = tag_normal_json.json; sourceTree = "<group>"; };
 		DA3983F21D7404E8009FB804 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3983F61D7404E8009FB804 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DA3983F81D7404E8009FB804 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -55,8 +54,6 @@
 		DA3983FB1D7404E8009FB804 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA3983FE1D7404E8009FB804 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA3984001D7404E8009FB804 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA39840D1D740543009FB804 /* ZZSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZSkin.h; sourceTree = "<group>"; };
-		DA39840E1D740543009FB804 /* ZZSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZSkin.m; sourceTree = "<group>"; };
 		DA3984101D740551009FB804 /* NSObject+ZZSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ZZSkin.h"; sourceTree = "<group>"; };
 		DA3984111D740551009FB804 /* NSObject+ZZSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ZZSkin.m"; sourceTree = "<group>"; };
 		DA3984131D740D95009FB804 /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
@@ -87,12 +84,8 @@
 		DA3984381D7428A1009FB804 /* 支付宝_green@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "支付宝_green@2x.png"; sourceTree = "<group>"; };
 		DA3984391D7428A1009FB804 /* 支付宝_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "支付宝_normal@2x.png"; sourceTree = "<group>"; };
 		DA39843A1D7428A1009FB804 /* 支付宝_red@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "支付宝_red@2x.png"; sourceTree = "<group>"; };
-		DA39844C1D7428E6009FB804 /* UIColor+SkinString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SkinString.h"; sourceTree = "<group>"; };
-		DA39844D1D7428E6009FB804 /* UIColor+SkinString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SkinString.m"; sourceTree = "<group>"; };
 		DA3984551D742E10009FB804 /* ZZSkinManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZSkinManager.h; sourceTree = "<group>"; };
 		DA3984561D742E10009FB804 /* ZZSkinManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZSkinManager.m; sourceTree = "<group>"; };
-		DA3984581D7430C2009FB804 /* ZZSkinExtern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZSkinExtern.h; sourceTree = "<group>"; };
-		DA3984591D7430C2009FB804 /* ZZSkinExtern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZSkinExtern.m; sourceTree = "<group>"; };
 		DA39845B1D792C5C009FB804 /* TwoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoCell.h; sourceTree = "<group>"; };
 		DA39845C1D792C5C009FB804 /* TwoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoCell.m; sourceTree = "<group>"; };
 		DA39845D1D792C5C009FB804 /* TwoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TwoCell.xib; sourceTree = "<group>"; };
@@ -168,14 +161,8 @@
 		DA3984091D7404FB009FB804 /* ZZSkin */ = {
 			isa = PBXGroup;
 			children = (
-				DA39840D1D740543009FB804 /* ZZSkin.h */,
-				DA39840E1D740543009FB804 /* ZZSkin.m */,
 				DA3984101D740551009FB804 /* NSObject+ZZSkin.h */,
 				DA3984111D740551009FB804 /* NSObject+ZZSkin.m */,
-				DA3984581D7430C2009FB804 /* ZZSkinExtern.h */,
-				DA3984591D7430C2009FB804 /* ZZSkinExtern.m */,
-				DA39844C1D7428E6009FB804 /* UIColor+SkinString.h */,
-				DA39844D1D7428E6009FB804 /* UIColor+SkinString.m */,
 				DA3984551D742E10009FB804 /* ZZSkinManager.h */,
 				DA3984561D742E10009FB804 /* ZZSkinManager.m */,
 			);
@@ -189,6 +176,7 @@
 				DA3984241D74288D009FB804 /* tag_red_json.json */,
 				DA3984251D74288D009FB804 /* tag_green_json.json */,
 				DA3984261D74288D009FB804 /* tag_blue_json.json */,
+				DA133147215282F900FECAF7 /* tag_normal_json.json */,
 				DA39842A1D7428A1009FB804 /* image_1.jpg */,
 				DA39842B1D7428A1009FB804 /* image_2.jpg */,
 				DA39842C1D7428A1009FB804 /* image_3.jpg */,
@@ -236,7 +224,7 @@
 		DA3983EA1D7404E8009FB804 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "刘威振";
 				TargetAttributes = {
 					DA3983F11D7404E8009FB804 = {
@@ -291,6 +279,7 @@
 				DA39843E1D7428A1009FB804 /* image_4.jpg in Resources */,
 				DA3984291D74288D009FB804 /* tag_blue_json.json in Resources */,
 				DA3984221D7416A6009FB804 /* TwoViewController.xib in Resources */,
+				DA133148215282F900FECAF7 /* tag_normal_json.json in Resources */,
 				DA39843C1D7428A1009FB804 /* image_2.jpg in Resources */,
 				DA3984461D7428A1009FB804 /* 京东_normal@2x.png in Resources */,
 			);
@@ -303,15 +292,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA39845A1D7430C2009FB804 /* ZZSkinExtern.m in Sources */,
 				DA3984121D740551009FB804 /* NSObject+ZZSkin.m in Sources */,
 				DA39841D1D741690009FB804 /* RootViewController.m in Sources */,
 				DA3984161D740D95009FB804 /* OneViewController.m in Sources */,
-				DA39840F1D740543009FB804 /* ZZSkin.m in Sources */,
 				DA39845E1D792C5C009FB804 /* TwoCell.m in Sources */,
 				DA3984571D742E10009FB804 /* ZZSkinManager.m in Sources */,
 				DA3983FA1D7404E8009FB804 /* AppDelegate.m in Sources */,
-				DA39844E1D7428E6009FB804 /* UIColor+SkinString.m in Sources */,
 				DA3983F71D7404E8009FB804 /* main.m in Sources */,
 				DA3984211D7416A6009FB804 /* TwoViewController.m in Sources */,
 				DA3984661D792C87009FB804 /* ChildViewController.m in Sources */,
@@ -341,13 +327,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -385,13 +381,23 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";

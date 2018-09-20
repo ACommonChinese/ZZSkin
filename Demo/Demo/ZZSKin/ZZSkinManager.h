@@ -6,17 +6,21 @@
 //  Copyright © 2016 liuweizhen. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "UIColor+SkinString.h"
-#import "ZZSkin.h"
+#import <UIKit/UIKit.h>
+#import "NSObject+ZZSkin.h"
+
+#define ZZSkinTypeNormal @"ZZSkinTypeNormal"
+#define ZZSkinTypeRed @"ZZSkinTypeRed"
+#define ZZSkinTypeGreen @"ZZSkinTypeGreen"
+#define ZZSkinTypeBlue @"ZZSkinTypeBlue"
+
+#define ZZSkinChangingNotificaiton @"ZZThemeChangingNotificaiton"
+#define ZZSkinCurrentTag @"ZZSkinCurrentTag"
 
 @interface ZZSkinManager : NSObject
 
-
-/**         / tag_1
- * jsonInfo - tag_2
- *          \ tag_3
- *          \ ...
+/**
+ * {key: tagName, value: dictionary}
  */
 @property (nonatomic) NSMutableDictionary *jsonInfo;
 
@@ -24,12 +28,16 @@
 
 + (instancetype)sharedManager;
 
-- (void)defaultSkin:(NSString *)skinTag;
+- (void)startSkin;
+
 - (void)startSkin:(NSString *)skinTag;
-- (void)addSkin:(NSString *)skinTag jsonData:(NSData *)jsonData;
 
 + (UIColor *)colorWithIdentifier:(NSString *)identifier;
 + (UIImage *)imageWithIdentifier:(NSString *)identifier;
 + (NSString *)stringWithIdentifier:(NSString *)identifier;
+
+- (void)refresh:(NSObject *)targetObject;
+
+- (void)addObject:(NSObject *)object configBlock:(block_id_t)configBlock;
 
 @end
